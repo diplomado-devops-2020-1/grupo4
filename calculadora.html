@@ -1,0 +1,62 @@
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <style>
+            .button-grid {
+                display: grid;
+                padding: 20px;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 15px;
+            }
+            .calc-button {
+                padding: 10px;
+                font-size: 22px;
+                color: #eee;
+                background: rgba(0, 0, 0, 0.5);
+                cursor: pointer;
+                border-radius: 2px;
+                border: 0;
+                outline: none;
+                opacity: 0.8;
+                transition: opacity 0.2s ease-in-out;
+            }
+            .calc-button:hover {
+                opacity: 1;
+            }
+            .calc-button:active {
+                background: #999;
+                box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+            }
+            #resultado {
+                font-size: 28px;
+                font-weight: bold;
+            }
+        </style>
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="calculadora.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h2><strong>Calculadora 10%</strong></h2>
+            <p>Esta calculadora presenta funciones básicas de suma y resta de números</p>
+            
+            <div class="row clearfix">
+                <div class="button-grid" id="calcGrid">
+                    
+                </div>
+                <div class="alert alert-success" id="alert" role="alert" style="display:none;"></div>
+                <div class="row clearfix" style="padding:20px;">
+                    <div class="form-line">
+                        <textarea class="form-control" id="resultado" disabled="true"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
